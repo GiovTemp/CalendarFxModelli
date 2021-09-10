@@ -65,11 +65,11 @@ public class WeekDayHeaderView extends DateControl {
             }
 
             startDate.set(date);
-            endDate.set(date.plusDays(getNumberOfDays() - 1));
+            endDate.set(date.plusDays(getNumberOfDays() - (long)1));
         });
 
         startDate.set(getDate());
-        endDate.set(getDate().plusDays(getNumberOfDays() - 1));
+        endDate.set(getDate().plusDays(getNumberOfDays() - (long)1));
 
         setCellFactory(date -> new WeekDayCell(this));
     }
