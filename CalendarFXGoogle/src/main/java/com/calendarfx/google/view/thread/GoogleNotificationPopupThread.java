@@ -41,7 +41,7 @@ import java.util.Map;
  */
 public class GoogleNotificationPopupThread extends Thread {
 
-    private static final long ONE_MINUTE = 1000 * 30;
+    private static final long ONE_MINUTE = 1000 * (long)30;
 
     private final CalendarView calendarView;
 
@@ -59,6 +59,7 @@ public class GoogleNotificationPopupThread extends Thread {
             try {
                 sleep(ONE_MINUTE);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 // Do nothing
             }
 
