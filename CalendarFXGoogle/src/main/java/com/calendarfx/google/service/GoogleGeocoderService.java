@@ -55,7 +55,7 @@ public final class GoogleGeocoderService {
                 for (GeocoderResult result : results) {
                     GeocoderGeometry geometry = result.getGeometry();
                     coordinate = geometry;
-                    break;
+                    
                 }
             }
         }
@@ -76,7 +76,7 @@ public final class GoogleGeocoderService {
                 List<GeocoderResult> results = response.getResults();
                 for (GeocoderResult result : results) {
                     location = result.getFormattedAddress();
-                    break;
+
                 }
             }
         }
