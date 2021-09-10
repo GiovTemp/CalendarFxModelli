@@ -246,15 +246,15 @@ public final class Util {
     }
 
     private static ZonedDateTime adjustField(ZonedDateTime time, ChronoField field, int stepRate) {
-        return time.with(field, time.get(field) - time.get(field) % stepRate);
+        return time.with(field, (long)time.get(field) - time.get(field) % stepRate);
     }
 
     private static LocalDateTime adjustField(LocalDateTime time, ChronoField field, int stepRate) {
-        return time.with(field, time.get(field) - time.get(field) % stepRate);
+        return time.with(field, (long)time.get(field) - time.get(field) % stepRate);
     }
 
     private static LocalTime adjustField(LocalTime time, ChronoField field, int stepRate) {
-        return time.with(field, time.get(field) - time.get(field) % stepRate);
+        return time.with(field, (long)time.get(field) - time.get(field) % stepRate);
     }
 
     private static class EmptySelectionModel<T> extends MultipleSelectionModel<T> {
