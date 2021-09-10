@@ -1517,6 +1517,7 @@ public class Entry<T> implements Comparable<Entry<?>> {
              */
             // iterator.advanceTo(st.toLocalDate());
 
+            assert recurrenceRule != null;
             DateList dateList = new Recur(recurrenceRule.replaceFirst("^RRULE:", "")).getDates(utilStartDate, utilEndDate, Value.DATE);
 
             for (Date date : dateList) {
