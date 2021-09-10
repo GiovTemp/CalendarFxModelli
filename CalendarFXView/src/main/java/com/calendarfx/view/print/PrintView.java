@@ -520,6 +520,7 @@ public class PrintView extends ViewTypeControl {
             double pageWidth = pageToPrint.prefWidth(-1);
             double pageHeight = pageToPrint.prefHeight(-1);
 
+            assert layout != null;
             double printableWidth = layout.getPrintableWidth();
             double printableHeight = layout.getPrintableHeight();
 
