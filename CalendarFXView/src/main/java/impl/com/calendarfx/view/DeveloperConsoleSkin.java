@@ -365,7 +365,7 @@ public class DeveloperConsoleSkin extends SkinBase<DeveloperConsole> {
                             .format(evt.getDateTime());
                 } else if (evt.getYearMonth() != null) {
                     return evt.getYearMonth().toString();
-                } else if (evt.getYearMonth() != null) {
+                } else if (evt.getYear() != null) {
                     return evt.getYear().toString();
                 }
             }
