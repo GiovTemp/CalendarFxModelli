@@ -330,6 +330,7 @@ public class DayViewScrollPane extends Pane {
                 Thread.sleep(300);
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
+                Thread.currentThread().interrupt();
             }
 
             while (running) {
@@ -340,6 +341,7 @@ public class DayViewScrollPane extends Pane {
                     sleep(15);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                    Thread.currentThread().interrupt();
                 }
             }
         }
