@@ -78,6 +78,7 @@ public class GoogleAutoRefreshThread extends Thread {
                     sleep(wait);
                 }
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 // Do nothing
             }
 
