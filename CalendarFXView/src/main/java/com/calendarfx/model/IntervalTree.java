@@ -295,7 +295,7 @@ class IntervalTree<E extends Entry<?>> {
             if (cmp == 0) {
                 cmp = compareLongs(getHigh(entry), t.high);
                 if (cmp == 0)
-                    cmp = entry.hashCode() - t.value.hashCode();
+                    cmp = entry.hashCode() - (long)t.value.hashCode();
             }
 
             if (cmp < 0) {
@@ -555,6 +555,7 @@ class IntervalTree<E extends Entry<?>> {
         // point to successor.
         if (p.left != null && p.right != null) {
             TreeEntry<E> s = successor(p);
+            assert s != null;
             p.low = s.low;
             p.high = s.high;
             p.value = s.value;
