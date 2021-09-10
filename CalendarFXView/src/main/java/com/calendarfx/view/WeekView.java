@@ -250,7 +250,7 @@ public class WeekView extends DayViewBase {
     private void updateStartAndEndDates() {
         LocalDate date = calculateStartDate();
         startDate.set(date);
-        endDate.set(date.plusDays(getNumberOfDays() - 1));
+        endDate.set(date.plusDays(getNumberOfDays() - (long)1));
     }
 
     private LocalDate calculateStartDate() {
