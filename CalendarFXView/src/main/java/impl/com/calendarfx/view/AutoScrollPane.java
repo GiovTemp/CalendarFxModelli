@@ -191,6 +191,7 @@ public class AutoScrollPane extends ScrollPane {
                 Thread.sleep(300);
             } catch (InterruptedException e1) {
                 e1.printStackTrace();
+                Thread.currentThread().interrupt();
             }
 
             while (running) {
@@ -201,6 +202,7 @@ public class AutoScrollPane extends ScrollPane {
                     sleep(15);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                    Thread.currentThread().interrupt();
                 }
             }
         }
