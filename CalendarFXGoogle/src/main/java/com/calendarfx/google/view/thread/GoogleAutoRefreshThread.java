@@ -98,15 +98,15 @@ public class GoogleAutoRefreshThread extends Thread {
 
         NEVER(0, "Never"),
 
-        EVERY_MINUTE(1000 * 60, "Every Minute"),
+        EVERY_MINUTE(1000 * (long)60, "Every Minute"),
 
-        EVERY_2_MINUTES(1000 * 60 * 2, "Every 2 Minutes"),
+        EVERY_2_MINUTES(1000 * (long)60 * 2, "Every 2 Minutes"),
 
-        EVERY_5_MINUTES(1000 * 60 * 5, "Every 5 Minutes"),
+        EVERY_5_MINUTES(1000 * (long)60 * 5, "Every 5 Minutes"),
 
-        EVERY_10_MINUTES(1000 * 60 * 10, "Every 10 Minutes"),
+        EVERY_10_MINUTES(1000 * (long)60 * 10, "Every 10 Minutes"),
 
-        EVERY_30_MINUTES(1000 * 60 * 30, "Every 30 Minutes");
+        EVERY_30_MINUTES(1000 * (long)60 * 30, "Every 30 Minutes");
 
         private long time;
         private String name;
