@@ -91,6 +91,7 @@ public class ICalCalendarApp extends Application {
                         sleep(10000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
+                        Thread.currentThread().interrupt();
                     }
                 }
             }
