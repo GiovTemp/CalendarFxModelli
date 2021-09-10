@@ -55,7 +55,7 @@ public final class GoogleGeocoderService {
                 for (GeocoderResult result : results) {
                     GeocoderGeometry geometry = result.getGeometry();
                     coordinate = geometry;
-                    
+
                 }
             }
         }
