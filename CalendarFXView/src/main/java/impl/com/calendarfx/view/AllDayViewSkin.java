@@ -350,7 +350,7 @@ public class AllDayViewSkin extends DateControlSkin<AllDayView> implements LoadD
                 startDate = Util.adjustToFirstDayOfWeek(getSkinnable().getDate(), getSkinnable().getFirstDayOfWeek());
             }
 
-            LocalDate endDate = startDate.plusDays(getSkinnable().getNumberOfDays() - 1);
+            LocalDate endDate = startDate.plusDays(getSkinnable().getNumberOfDays() - (long)1);
 
             long deltaDays = ChronoUnit.DAYS.between(startDate, entry.getStartDate());
 
@@ -481,7 +481,7 @@ public class AllDayViewSkin extends DateControlSkin<AllDayView> implements LoadD
 
     @Override
     public LocalDate getLoadEndDate() {
-        return getLoadStartDate().plusDays(getSkinnable().getNumberOfDays() - 1);
+        return getLoadStartDate().plusDays(getSkinnable().getNumberOfDays() - (long)1);
     }
 
     @Override
