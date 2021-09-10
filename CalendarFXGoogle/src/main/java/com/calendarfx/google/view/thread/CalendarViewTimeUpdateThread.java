@@ -52,6 +52,7 @@ public class CalendarViewTimeUpdateThread extends Thread {
             try {
                 sleep(TEN_SECONDS);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 // Do nothing
             }
         }
