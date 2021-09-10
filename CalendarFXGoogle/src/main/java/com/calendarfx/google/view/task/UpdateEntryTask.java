@@ -30,7 +30,8 @@ import java.util.Map;
  */
 public final class UpdateEntryTask extends GoogleTask<GoogleEntry> {
 
-    private static final long TWO_SECONDS = 2 * 1000;
+    public static long x =2;
+    private static final long TWO_SECONDS = x * 1000;
 
     private GoogleEntry entry;
     private final GoogleAccount account;
