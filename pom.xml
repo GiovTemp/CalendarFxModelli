@@ -16,6 +16,10 @@
     <url>https://github.com/dlsc-software-consulting-gmbh/CalendarFX</url>
 
     <properties>
+
+  	<sonar.organization>gruppogadg</sonar.organization>
+  	<sonar.host.url>https://sonarcloud.io/</sonar.host.url>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javafx.version>14</javafx.version>
         <javafx.maven.plugin.version>0.0.4</javafx.maven.plugin.version>
