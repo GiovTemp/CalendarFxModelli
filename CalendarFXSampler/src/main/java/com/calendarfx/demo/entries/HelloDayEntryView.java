@@ -54,6 +54,8 @@ public class HelloDayEntryView extends HelloEntryViewBase {
                         case 2:
                             region.setStyle("-fx-background-color: blue;");
                             break;
+                        default:
+                            break;
                     }
 
                     region.setPrefSize(8, 8);

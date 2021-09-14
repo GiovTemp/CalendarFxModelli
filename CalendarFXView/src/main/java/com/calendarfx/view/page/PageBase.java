@@ -200,7 +200,7 @@ public abstract class PageBase extends DateControl {
      */
     public abstract ViewType getPrintViewType();
 
-    private final String PAGE_BASE_CATEGORY = "Page Base";
+    private static final String PAGE_BASE_CATEGORY = "Page Base";
 
     @Override
     public ObservableList<Item> getPropertySheetItems() {

@@ -43,6 +43,7 @@ public class TimeField extends CalendarFXControl {
      * Constructs a new field.
      */
     public TimeField() {
+        //empty method
     }
 
     @Override
@@ -120,6 +121,7 @@ public class TimeField extends CalendarFXControl {
      *
      * @return the property sheet items
      */
+    @Override
     public ObservableList<Item> getPropertySheetItems() {
 
         ObservableList<Item> items = FXCollections.observableArrayList();

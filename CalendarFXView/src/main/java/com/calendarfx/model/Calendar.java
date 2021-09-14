@@ -332,7 +332,7 @@ public class Calendar implements EventTarget {
                          * with the given day. We have to find a solution for
                          * this.
                          */
-                        // iterator.advanceTo(st.toLocalDate());
+
 
                         DateList dateList = new Recur(recurrenceRule.replaceFirst("^RRULE:", "")).getDates(utilStartDate, utilEndDate, DATE);
 

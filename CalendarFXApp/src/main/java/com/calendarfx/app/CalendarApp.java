@@ -66,7 +66,7 @@ public class CalendarApp extends Application {
         calendarView.setRequestedTime(LocalTime.now());
 
         StackPane stackPane = new StackPane();
-        stackPane.getChildren().addAll(calendarView); // introPane);
+        stackPane.getChildren().addAll(calendarView);
 
         Thread updateTimeThread = new Thread("Calendar: Update Time Thread") {
             @Override

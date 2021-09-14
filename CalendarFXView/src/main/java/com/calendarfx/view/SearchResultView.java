@@ -224,6 +224,7 @@ public class SearchResultView extends CalendarFXControl {
     private class SearchService extends Service<List<Entry<?>>> {
 
         public SearchService() {
+            //empry method
         }
 
         @Override

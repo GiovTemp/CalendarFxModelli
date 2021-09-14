@@ -273,7 +273,7 @@ class IntervalTree<E extends Entry<?>> {
             // TODO: reactivate this check, currently does not work when the start and end time
             // of an entry get changed inside the EntryDetailView (two lambda expressions being evaluated
             // in parallel).
-//            throw new IllegalArgumentException("an entry with ID = " + entry.getId() + " was already added to the calendar");
+
         }
 
         entryIDs.add(id);

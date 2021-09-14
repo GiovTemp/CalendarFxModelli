@@ -84,7 +84,10 @@ import static javafx.scene.input.MouseButton.PRIMARY;
  * @see MonthView#entryViewFactoryProperty()
  */
 public abstract class EntryViewBase<T extends DateControl> extends CalendarFXControl implements Comparable<EntryViewBase<T>> {
-
+    public final static String DRAGGED = "dragged";
+    public final static String DRAGGEDEND = "dragged-end";
+    public final static String SELECTED = "selected";
+    public final static String HIDDEN = "hidden";
     private static final PseudoClass DRAGGED_PSEUDO_CLASS = PseudoClass.getPseudoClass("dragged");
 
     private static final PseudoClass DRAGGED_START_PSEUDO_CLASS = PseudoClass.getPseudoClass("dragged-start");
@@ -156,26 +159,26 @@ public abstract class EntryViewBase<T extends DateControl> extends CalendarFXCon
                     setEndTime((LocalTime) change.getValueAdded());
                 } else if (change.getKey().equals("position")) {
                     setPosition((Position) change.getValueAdded());
-                } else if (change.getKey().equals("dragged")) {
+                } else if (change.getKey().equals(DRAGGED)) {
                     Boolean onOff = (Boolean) change.getValueAdded();
                     dragged.set(onOff);
-                    getProperties().remove("dragged");
+                    getProperties().remove(DRAGGED);
                 } else if (change.getKey().equals("dragged-start")) {
                     Boolean onOff = (Boolean) change.getValueAdded();
                     draggedStart.set(onOff);
                     getProperties().remove("dragged-start");
-                } else if (change.getKey().equals("dragged-end")) {
+                } else if (change.getKey().equals(DRAGGEDEND)) {
                     Boolean onOff = (Boolean) change.getValueAdded();
                     draggedEnd.set(onOff);
-                    getProperties().remove("dragged-end");
-                } else if (change.getKey().equals("selected")) {
+                    getProperties().remove(DRAGGEDEND);
+                } else if (change.getKey().equals(SELECTED)) {
                     Boolean onOff = (Boolean) change.getValueAdded();
                     selected.set(onOff);
-                    getProperties().remove("selected");
-                } else if (change.getKey().equals("hidden")) {
+                    getProperties().remove(SELECTED);
+                } else if (change.getKey().equals(HIDDEN)) {
                     Boolean onOff = (Boolean) change.getValueAdded();
                     setHidden(onOff);
-                    getProperties().remove("hidden");
+                    getProperties().remove(HIDDEN);
                 } else if (change.getKey().equals("control")) {
                     T control = (T) change.getValueAdded();
                     setDateControl(control);
@@ -245,7 +248,7 @@ public abstract class EntryViewBase<T extends DateControl> extends CalendarFXCon
              * We want to make sure the dragged entry gets styled like a
              * selected entry.
              */
-            getProperties().put("selected", true);
+            getProperties().put(SELECTED, true);
         }
 
         entry.calendarProperty().addListener(weakCalendarListener);
@@ -275,7 +278,7 @@ public abstract class EntryViewBase<T extends DateControl> extends CalendarFXCon
      */
     public final ReadOnlyBooleanProperty hiddenProperty() {
         if (hidden == null) {
-            hidden = new ReadOnlyBooleanWrapper(this, "hidden", _hidden);
+            hidden = new ReadOnlyBooleanWrapper(this, HIDDEN, _hidden);
         }
         return hidden.getReadOnlyProperty();
     }
@@ -699,7 +702,7 @@ public abstract class EntryViewBase<T extends DateControl> extends CalendarFXCon
 
         @Override
         public String getName() {
-            return "dragged";
+            return DRAGGED;
         }
     };
 
@@ -824,7 +827,7 @@ public abstract class EntryViewBase<T extends DateControl> extends CalendarFXCon
 
         @Override
         public String getName() {
-            return "selected";
+            return SELECTED;
         }
     };
 

@@ -130,6 +130,7 @@ public class ResourceCalendarViewSkin<T> extends DayViewBaseSkin<ResourceCalenda
     public class HeaderGridPane extends GridPane {
 
         public HeaderGridPane() {
+            //empty method
         }
 
         private void updateView() {

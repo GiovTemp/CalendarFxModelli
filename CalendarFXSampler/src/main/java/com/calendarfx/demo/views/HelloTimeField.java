@@ -25,6 +25,8 @@ import javafx.scene.layout.VBox;
 
 public class HelloTimeField extends CalendarFXSample {
 
+    public static final String TIME ="Time: ";
+
     @Override
     public String getSampleName() {
         return "Time Field";
@@ -33,9 +35,9 @@ public class HelloTimeField extends CalendarFXSample {
     @Override
     protected Node createControl() {
         TimeField timeField = new TimeField();
-        Label label = new Label("Time: ");
-        label.setText("Time: " + timeField.getValue().toString());
-        timeField.valueProperty().addListener(it -> label.setText("Time: " + timeField.getValue().toString()));
+        Label label = new Label(TIME);
+        label.setText(TIME + timeField.getValue().toString());
+        timeField.valueProperty().addListener(it -> label.setText(TIME + timeField.getValue().toString()));
 
         VBox box = new VBox();
         box.setSpacing(20);

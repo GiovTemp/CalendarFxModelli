@@ -156,7 +156,7 @@ public class WeekPage extends PageBase {
         return ViewType.WEEK_VIEW;
     }
 
-    private final String WEEK_PAGE_CATEGORY = "Week Page";
+    private static final String WEEK_PAGE_CATEGORY = "Week Page";
 
     @Override
     public ObservableList<PropertySheet.Item> getPropertySheetItems() {

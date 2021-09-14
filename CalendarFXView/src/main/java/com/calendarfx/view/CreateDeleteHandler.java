@@ -81,6 +81,7 @@ class CreateDeleteHandler {
                 break;
             case F5:
                 dateControl.refreshData();
+                break;
             default:
                 break;
         }

@@ -55,6 +55,13 @@ public class DayViewEditController {
     private Duration offsetDuration;
     private Duration entryDuration;
 
+    public static final String NEWINTERVAL = "new interval: sd = ";
+    public static final String ST = ", st = ";
+    public static final String ED = ", ed = ";
+    public static final String ET = ", et = ";
+
+
+
     public DayViewEditController(DayViewBase dayView) {
         this.dayView = Objects.requireNonNull(dayView);
 
@@ -333,7 +340,7 @@ public class DayViewEditController {
                 endDate = entry.getEndDate();
             }
 
-            LOGGER.finer("new interval: sd = " + startDate + ", st = " + startTime + ", ed = " + endDate + ", et = " + endTime);
+            LOGGER.finer(NEWINTERVAL + startDate + ST + startTime + ED + endDate + ET + endTime);
 
             draggedEntry.setInterval(startDate, startTime, endDate, endTime);
 
@@ -376,8 +383,7 @@ public class DayViewEditController {
                 endDate = time.toLocalDate();
             }
 
-            LOGGER.finer("new interval: sd = " + startDate + ", st = "
-                    + startTime + ", ed = " + endDate + ", et = " + endTime);
+            LOGGER.finer(NEWINTERVAL + startDate + ST + startTime + ED + endDate + ET + endTime);
 
             draggedEntry.setInterval(startDate, startTime, endDate, endTime);
 
@@ -407,8 +413,7 @@ public class DayViewEditController {
             LocalDate endDate = LocalDateTime.of(startDate, startTime).plus(entryDuration).toLocalDate();
             LocalTime endTime = newEndTime.toLocalTime();
 
-            LOGGER.finer("new interval: sd = " + startDate + ", st = " + startTime + ", ed = " + endDate + ", et = " + endTime);
-
+            LOGGER.finer(NEWINTERVAL + startDate + ST + startTime + ED + endDate + ET + endTime);
             draggedEntry.setInterval(startDate, startTime, endDate, endTime);
 
             requestLayout();

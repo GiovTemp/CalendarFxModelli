@@ -844,7 +844,7 @@ public class CalendarView extends DateControl {
         }
     }
 
-    private final String CALENDAR_VIEW_CATEGORY = "Calendar View";
+    private static final String CALENDAR_VIEW_CATEGORY = "Calendar View";
 
     @Override
     public ObservableList<Item> getPropertySheetItems() {

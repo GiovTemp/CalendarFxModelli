@@ -71,6 +71,7 @@ public abstract class ViewTypeControl extends CalendarFXControl {
 
     private static final String VIEW_TYPE_CONTROL = "View Type";
 
+    @Override
     public ObservableList<PropertySheet.Item> getPropertySheetItems() {
         ObservableList<PropertySheet.Item> items = super.getPropertySheetItems();
 
@@ -97,7 +98,7 @@ public abstract class ViewTypeControl extends CalendarFXControl {
 
             @Override
             public String getName() {
-                return "View Type";
+                return VIEW_TYPE_CONTROL;
             }
 
             @Override

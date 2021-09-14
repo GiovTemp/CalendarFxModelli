@@ -35,6 +35,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.kordamp.ikonli.fontawesome.FontAwesome;
 import org.kordamp.ikonli.javafx.FontIcon;
@@ -44,6 +45,8 @@ import java.time.LocalTime;
 import java.time.ZonedDateTime;
 
 public class ResourceCalendarApp extends Application {
+
+    public static final String FONTFAMILY="-fx-font-family: Monospaced; -fx-text-fill: blue; -fx-font-style: bold;";
 
     @Override
     public void start(Stage primaryStage) {
@@ -71,10 +74,12 @@ public class ResourceCalendarApp extends Application {
             Label label3 = new Label("13.200");
             Label label4 = new Label("92 (CPC)");
 
+
+
             label1.setStyle("-fx-font-family: Monospaced; -fx-font-style: bold;");
-            label2.setStyle("-fx-font-family: Monospaced; -fx-text-fill: blue; -fx-font-style: bold;");
-            label3.setStyle("-fx-font-family: Monospaced; -fx-text-fill: blue; -fx-font-style: bold;");
-            label4.setStyle("-fx-font-family: Monospaced; -fx-text-fill: blue; -fx-font-style: bold;");
+            label2.setStyle(FONTFAMILY);
+            label3.setStyle(FONTFAMILY);
+            label4.setStyle(FONTFAMILY);
 
             label1.setAlignment(Pos.CENTER);
             label2.setAlignment(Pos.CENTER);
@@ -124,8 +129,7 @@ public class ResourceCalendarApp extends Application {
                  * the right of a day view with a given width. This is needed to support
                  * "vertical bars".
                  */
-                // entryView.setPrefWidth(10);
-                // entryView.setAlignmentStrategy(AlignmentStrategy.ALIGN_LEFT);
+
 
                 /* PSI:
                  * Here you can experiment with the new height layout strategy that allows
@@ -133,7 +137,6 @@ public class ResourceCalendarApp extends Application {
                  * of a height determined by their start and end time. This is required to
                  * implement the Event Monitoring Panel.
                  */
-                // entryView.setHeightLayoutStrategy(HeightLayoutStrategy.COMPUTE_PREF_SIZE);
 
                 if (Math.random() > .7) {
                     final FontIcon node = new FontIcon(FontAwesome.ERASER);

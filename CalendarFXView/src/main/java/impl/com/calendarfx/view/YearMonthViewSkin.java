@@ -271,6 +271,7 @@ public class YearMonthViewSkin extends DateControlSkin<YearMonthView>
 
     @Override
     protected void entryFullDayChanged(CalendarEvent evt) {
+        //empty Method
     }
 
     @Override

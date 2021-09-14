@@ -142,6 +142,8 @@ public class HelloPerformance extends CalendarFXDateControlSample {
     class HelloCalendar extends Calendar {
 
         public HelloCalendar() {
+
+            //empty method
         }
     }
 

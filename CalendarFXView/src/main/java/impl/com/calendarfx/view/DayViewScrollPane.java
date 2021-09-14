@@ -107,7 +107,7 @@ public class DayViewScrollPane extends Pane {
         addEventFilter(MouseEvent.MOUSE_RELEASED, evt -> stopAutoScrollIfNeeded());
 
         // drag and drop from the outside
-        // TODO: PUT BACK IN addEventFilter(MouseEvent.DRAG_DETECTED, evt -> startDrag(evt));
+
         addEventFilter(DragEvent.DRAG_OVER, this::autoscrollIfNeeded);
         addEventFilter(DragEvent.DRAG_EXITED, evt -> stopAutoScrollIfNeeded());
         addEventFilter(DragEvent.DRAG_DROPPED, evt -> stopAutoScrollIfNeeded());

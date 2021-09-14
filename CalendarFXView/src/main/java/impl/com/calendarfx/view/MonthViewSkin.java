@@ -77,6 +77,9 @@ import static javafx.scene.layout.Priority.ALWAYS;
 
 public class MonthViewSkin extends DateControlSkin<MonthView> implements LoadDataSettingsProvider {
 
+    public static final String HYPERLINK = "date-hyperlink";
+    public static final String HIDDEN = "hidden";
+
     private static final String DAY_OF_WEEK_LABEL = "day-of-week-label";
 
     private static final String DAY_OF_WEEKEND_LABEL = "day-of-weekend-label";
@@ -482,7 +485,7 @@ public class MonthViewSkin extends DateControlSkin<MonthView> implements LoadDat
                         fireEvent(new RequestEvent(getSkinnable(), getSkinnable(), date));
                     }
                 });
-                dateLabel.getStyleClass().add("date-hyperlink");
+                dateLabel.getStyleClass().add(HYPERLINK);
             }
 
             WeekFields weekFields = getSkinnable().getWeekFields();
@@ -496,7 +499,7 @@ public class MonthViewSkin extends DateControlSkin<MonthView> implements LoadDat
             weekLabel.setVisible(firstDay.equals(date));
 
             if (getSkinnable().isEnableHyperlinks()) {
-                weekLabel.getStyleClass().add("date-hyperlink");
+                weekLabel.getStyleClass().add(HYPERLINK);
                 weekLabel.setOnMouseClicked(evt -> {
                     if (evt.getClickCount() == 1) {
                         getSkinnable().fireEvent(new RequestEvent(getSkinnable(), getSkinnable(), year, weekOfYear));
@@ -616,7 +619,7 @@ public class MonthViewSkin extends DateControlSkin<MonthView> implements LoadDat
             moreLabel.setVisible(false);
 
             if (getSkinnable().isEnableHyperlinks()) {
-                moreLabel.getStyleClass().add("date-hyperlink");
+                moreLabel.getStyleClass().add(HYPERLINK);
                 moreLabel.setOnMouseClicked(evt -> fireEvent(new RequestEvent(this, this, date)));
             }
 
@@ -747,15 +750,15 @@ public class MonthViewSkin extends DateControlSkin<MonthView> implements LoadDat
                             snapSize(ph));
 
                     y += ph + 1; // +1 = gap
-                    child.getProperties().put("hidden", false);
+                    child.getProperties().put(HIDDEN, false);
                     childrenAdded++;
                 } else {
                     if (!conflictFound && i > 0) {
                         conflictFound = true;
-                        children.get(i - 1).getProperties().put("hidden", true);
+                        children.get(i - 1).getProperties().put(HIDDEN, true);
                     }
 
-                    child.getProperties().put("hidden", true);
+                    child.getProperties().put(HIDDEN, true);
                 }
             }
 

@@ -46,7 +46,7 @@ public class DateSelectionModelTests {
         assertNotNull(model.getSelectedDates());
         assertThat(model.getSelectedDates(), is(empty()));
         assertTrue(model.isEmpty());
-        assertEquals(model.getSelectionMode(), SelectionMode.MULTIPLE_DATES);
+        assertEquals(SelectionMode.MULTIPLE_DATES,model.getSelectionMode());
         assertThat(model.getLastSelected(), is(nullValue()));
     }
 

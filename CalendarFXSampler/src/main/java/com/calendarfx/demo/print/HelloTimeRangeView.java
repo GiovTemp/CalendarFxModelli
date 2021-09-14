@@ -28,6 +28,9 @@ import javafx.scene.layout.VBox;
 
 public class HelloTimeRangeView extends CalendarFXSample {
 
+    public static final String RANGE="Range:   ";
+    public static final String TO ="    to    ";
+
     @Override
     public String getSampleName() {
         return "Time Range View";
@@ -35,7 +38,7 @@ public class HelloTimeRangeView extends CalendarFXSample {
 
     @Override
     public String getSampleDescription() {
-        return "Allows to configure the period to be printed via the print dialog";
+        return "Allows to configure the perifod to be printed via the print dialog";
     }
 
     @Override
@@ -52,10 +55,10 @@ public class HelloTimeRangeView extends CalendarFXSample {
     protected Node wrap(Node node) {
         TimeRangeView field = (TimeRangeView) node;
 
-        Label label = new Label("Range:   " + field.getStartDate() + "    to    " + field.getEndDate());
+        Label label = new Label(RANGE + field.getStartDate() + TO + field.getEndDate());
         label.setMaxHeight(Double.MAX_VALUE);
-        field.startDateProperty().addListener(it -> label.setText("Range:   " + field.getStartDate() + "    to    " + field.getEndDate()));
-        field.endDateProperty().addListener(it -> label.setText("Range:   " + field.getStartDate() + "    to    " + field.getEndDate()));
+        field.startDateProperty().addListener(it -> label.setText(RANGE + field.getStartDate() + TO  + field.getEndDate()));
+        field.endDateProperty().addListener(it -> label.setText(RANGE + field.getStartDate() +TO + field.getEndDate()));
 
         VBox box2 = new VBox(20, field, label);
         box2.setFillWidth(false);

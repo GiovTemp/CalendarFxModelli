@@ -61,6 +61,8 @@ import static java.util.Objects.requireNonNull;
  */
 public abstract class DayViewBase extends DateControl implements ZonedDateTimeProvider {
 
+    public String HOUR="hourHeight";
+
     /**
      * Constructs a new view.
      */
@@ -379,7 +381,7 @@ public abstract class DayViewBase extends DateControl implements ZonedDateTimePr
         return visibleHoursProperty().get();
     }
 
-    private final DoubleProperty minHourHeight = new SimpleDoubleProperty(this, "hourHeight", 20);
+    private final DoubleProperty minHourHeight = new SimpleDoubleProperty(this, HOUR, 20);
 
     public final double getMinHourHeight() {
         return minHourHeight.get();
@@ -399,7 +401,7 @@ public abstract class DayViewBase extends DateControl implements ZonedDateTimePr
         this.minHourHeight.set(minHourHeight);
     }
 
-    private final DoubleProperty maxHourHeight = new SimpleDoubleProperty(this, "hourHeight", 200);
+    private final DoubleProperty maxHourHeight = new SimpleDoubleProperty(this, HOUR, 200);
 
     public final double getMaxHourHeight() {
         return maxHourHeight.get();
@@ -419,7 +421,7 @@ public abstract class DayViewBase extends DateControl implements ZonedDateTimePr
         this.maxHourHeight.set(maxHourHeight);
     }
 
-    private final DoubleProperty hourHeight = new SimpleDoubleProperty(this, "hourHeight", 70);
+    private final DoubleProperty hourHeight = new SimpleDoubleProperty(this, HOUR, 70);
 
     /**
      * The height used for each hour shown by the view.
@@ -1073,6 +1075,7 @@ public abstract class DayViewBase extends DateControl implements ZonedDateTimePr
 
             @Override
             public void setValue(Object value) {
+                //empty method
             }
 
             @Override
@@ -1115,6 +1118,7 @@ public abstract class DayViewBase extends DateControl implements ZonedDateTimePr
 
             @Override
             public void setValue(Object value) {
+                //emppty Mehtod
             }
 
             @Override

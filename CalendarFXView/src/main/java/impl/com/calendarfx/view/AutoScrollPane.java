@@ -34,7 +34,7 @@ import javafx.scene.input.TransferMode;
  */
 public class AutoScrollPane extends ScrollPane {
 
-    final double proximity = 20;
+    final static double proximity = 20;
 
     /**
      * Constructs a new scrollpane.

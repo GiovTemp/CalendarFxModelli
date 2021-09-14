@@ -347,7 +347,7 @@ public class CalendarEvent extends Event {
         }
 
         Interval newInterval = entry.getInterval();
-        Interval oldInterval = getOldInterval();
+        oldInterval = getOldInterval();
 
         ZonedDateTime newStart = newInterval.getStartZonedDateTime();
         ZonedDateTime oldStart = oldInterval.getStartZonedDateTime();

@@ -59,6 +59,8 @@ import static java.util.Objects.requireNonNull;
  */
 public class DayPage extends PageBase {
 
+    public static final String ICON = "button-icon";
+
     private AgendaView agendaView;
     private YearMonthView yearMonthView;
     private DetailedDayView detailedDayView;
@@ -98,17 +100,17 @@ public class DayPage extends PageBase {
         ToggleButton standardButton = new ToggleButton();
 
         FontIcon listIcon = new FontIcon(FontAwesome.LIST);
-        listIcon.getStyleClass().addAll("button-icon");
+        listIcon.getStyleClass().addAll(ICON);
         agendaOnlyButton.setGraphic(listIcon);
         agendaOnlyButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
 
         FontIcon calendarIcon = new FontIcon(FontAwesome.CALENDAR);
-        calendarIcon.getStyleClass().addAll("button-icon");
+        calendarIcon.getStyleClass().addAll(ICON);
         dayOnlyButton.setGraphic(calendarIcon);
         dayOnlyButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
 
         FontIcon standardIcon = new FontIcon(FontAwesome.COLUMNS);
-        standardIcon.getStyleClass().addAll("button-icon");
+        standardIcon.getStyleClass().addAll(ICON);
         standardButton.setGraphic(standardIcon);
         standardButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
 
@@ -131,7 +133,7 @@ public class DayPage extends PageBase {
         layoutButton.setTooltip(new Tooltip(Messages.getString("DayPage.TOOLTIP_LAYOUT")));
         layoutButton.setId("layout-button");
         FontIcon layoutIcon = new FontIcon(FontAwesome.TABLE);
-        layoutIcon.getStyleClass().addAll("button-icon", "layout-button-icon");
+        layoutIcon.getStyleClass().addAll(ICON, "layout-button-icon");
         layoutButton.setGraphic(layoutIcon);
         layoutButton.setSelected(getLayout().equals(Layout.SWIMLANE));
         layoutButton.setOnAction(evt -> {

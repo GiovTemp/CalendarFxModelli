@@ -41,6 +41,8 @@ import java.util.Set;
  */
 public class PaperView extends ViewTypeControl {
 
+    public String MARGININVALID="The margin is invalid: ";
+
     private static final String DEFAULT_STYLE = "paper-view";
 
     /**
@@ -186,7 +188,7 @@ public class PaperView extends ViewTypeControl {
         @Override
         public void set(double newValue) {
             if (newValue < 0) {
-                throw new IllegalArgumentException("The margin is invalid: " + newValue);
+                throw new IllegalArgumentException(MARGININVALID + newValue);
             }
             super.set(newValue);
         }
@@ -225,7 +227,7 @@ public class PaperView extends ViewTypeControl {
         @Override
         public void set(double newValue) {
             if (newValue < 0) {
-                throw new IllegalArgumentException("The margin is invalid: " + newValue);
+                throw new IllegalArgumentException(MARGININVALID + newValue);
             }
             super.set(newValue);
         }
@@ -264,7 +266,7 @@ public class PaperView extends ViewTypeControl {
         @Override
         public void set(double newValue) {
             if (newValue < 0) {
-                throw new IllegalArgumentException("The margin is invalid: " + newValue);
+                throw new IllegalArgumentException(MARGININVALID + newValue);
             }
             super.set(newValue);
         }
@@ -303,7 +305,7 @@ public class PaperView extends ViewTypeControl {
         @Override
         public void set(double newValue) {
             if (newValue < 0) {
-                throw new IllegalArgumentException("The margin is invalid: " + newValue);
+                throw new IllegalArgumentException(MARGININVALID + newValue);
             }
             super.set(newValue);
         }

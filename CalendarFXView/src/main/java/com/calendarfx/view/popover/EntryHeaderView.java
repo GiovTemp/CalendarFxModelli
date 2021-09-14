@@ -35,6 +35,8 @@ import static java.util.Objects.requireNonNull;
 
 public class EntryHeaderView extends GridPane {
 
+    public static final String POPOVERTITLE = "-entry-popover-title";
+
     private final CalendarSelector calendarSelector;
 
     private Entry<?> entry;
@@ -98,15 +100,15 @@ public class EntryHeaderView extends GridPane {
 
         Calendar calendar = entry.getCalendar();
 
-        titleField.getStyleClass().add(calendar.getStyle() + "-entry-popover-title");
+        titleField.getStyleClass().add(calendar.getStyle() + POPOVERTITLE);
 
         entry.calendarProperty()
                 .addListener((observable, oldCalendar, newCalendar) -> {
                     if (oldCalendar != null) {
-                        titleField.getStyleClass().remove(oldCalendar.getStyle() + "-entry-popover-title");
+                        titleField.getStyleClass().remove(oldCalendar.getStyle() + POPOVERTITLE);
                     }
                     if (newCalendar != null) {
-                        titleField.getStyleClass().add(newCalendar.getStyle() + "-entry-popover-title");
+                        titleField.getStyleClass().add(newCalendar.getStyle() + POPOVERTITLE);
                     }
                 });
     }

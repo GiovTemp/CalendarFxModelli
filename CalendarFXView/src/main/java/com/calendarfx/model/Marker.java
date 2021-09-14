@@ -16,6 +16,7 @@ import java.time.ZonedDateTime;
 public class Marker {
 
     public Marker() {
+        //empry costr
     }
 
     private final BooleanProperty movable = new SimpleBooleanProperty(this, "movable", true);

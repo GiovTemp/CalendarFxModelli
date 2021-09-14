@@ -82,6 +82,9 @@ public class DayViewSkin<T extends DayView> extends DayViewBaseSkin<T> implement
 
     private double startY;
 
+    public static final String EARLYHOUR = "early-hour-line";
+    public static final String LATEHOUR = "late-hour-line";
+
     public DayViewSkin(T view) {
         super(view);
 
@@ -311,7 +314,7 @@ public class DayViewSkin<T extends DayView> extends DayViewBaseSkin<T> implement
         for (int i = 0; i < lineCount; i++) {
             Line line = lines.get(i);
 
-            line.getStyleClass().removeAll("early-hour-line", "late-hour-line");
+            line.getStyleClass().removeAll(EARLYHOUR, LATEHOUR);
 
             int hour = (i + 1) / 2;
             int minute = 0;
@@ -324,13 +327,13 @@ public class DayViewSkin<T extends DayView> extends DayViewBaseSkin<T> implement
             LocalTime time = LocalTime.of(hour, minute);
 
             if (time.isBefore(startTime)) {
-                if (!line.getStyleClass().contains("early-hour-line")) {
-                    line.getStyleClass().add("early-hour-line");
+                if (!line.getStyleClass().contains(EARLYHOUR)) {
+                    line.getStyleClass().add(EARLYHOUR);
                 }
             }
             if (time.isAfter(endTime)) {
-                if (!line.getStyleClass().contains("late-hour-line")) {
-                    line.getStyleClass().add("late-hour-line");
+                if (!line.getStyleClass().contains(LATEHOUR)) {
+                    line.getStyleClass().add(LATEHOUR);
                 }
             }
 

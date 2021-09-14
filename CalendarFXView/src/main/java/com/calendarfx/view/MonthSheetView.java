@@ -87,6 +87,7 @@ import static java.util.Objects.requireNonNull;
  */
 public class MonthSheetView extends DateControl {
 
+    private static final String LABEL = "-label";
     private static final String DEFAULT_STYLE_CLASS = "month-sheet-view";
 
     private static final String USAGE_VERY_LOW = "usage-very-low";
@@ -1701,9 +1702,9 @@ public class MonthSheetView extends DateControl {
 
             if (date != null) {
                 String dayOfWeekName = date.getDayOfWeek().name().toLowerCase();
-                dayOfMonthLabel.getStyleClass().add(dayOfWeekName + "-label");
-                dayOfWeekLabel.getStyleClass().add(dayOfWeekName + "-label");
-                weekNumberLabel.getStyleClass().add(dayOfWeekName + "-label");
+                dayOfMonthLabel.getStyleClass().add(dayOfWeekName + LABEL);
+                dayOfWeekLabel.getStyleClass().add(dayOfWeekName + LABEL);
+                weekNumberLabel.getStyleClass().add(dayOfWeekName + LABEL);
             }
 
             getChildren().addAll(dayOfMonthLabel, dayOfWeekLabel, weekNumberLabel);

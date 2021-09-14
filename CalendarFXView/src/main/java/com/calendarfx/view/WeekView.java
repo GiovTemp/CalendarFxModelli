@@ -399,6 +399,7 @@ public class WeekView extends DayViewBase {
 
             @Override
             public void setValue(Object value) {
+                //empty mehtod
             }
 
             @Override
@@ -436,6 +437,7 @@ public class WeekView extends DayViewBase {
 
             @Override
             public void setValue(Object value) {
+                //empty method
             }
 
             @Override

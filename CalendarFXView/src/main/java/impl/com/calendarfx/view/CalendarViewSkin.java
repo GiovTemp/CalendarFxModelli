@@ -110,6 +110,8 @@ public class CalendarViewSkin extends SkinBase<CalendarView> {
     private final InvalidationListener entriesVisibilityListener = obs -> updateCalendarVisibility();
     private final InvalidationListener printEntriesVisibilityListener = obs -> updatePrintVisibility();
 
+    public static final String CALENDARCSS = "calendar.css";
+
     public CalendarViewSkin(CalendarView view) {
         super(view);
 
@@ -306,7 +308,7 @@ public class CalendarViewSkin extends SkinBase<CalendarView> {
         searchField.setPromptText(
                 Messages.getString("CalendarViewSkin.PROMPT_SEARCH_FIELD"));
         searchField.getStylesheets().add(CalendarFXControl.class
-                .getResource("calendar.css").toExternalForm());
+                .getResource(CALENDARCSS).toExternalForm());
         GridPane.setFillWidth(searchField, false);
         GridPane.setHalignment(searchField, HPos.RIGHT);
         toolBarGridPane.add(searchField, 2, 0);
@@ -325,7 +327,7 @@ public class CalendarViewSkin extends SkinBase<CalendarView> {
         leftMasterDetailPane.animatedProperty()
                 .bindBidirectional(view.traysAnimatedProperty());
         leftMasterDetailPane.getStylesheets().add(CalendarFXControl.class
-                .getResource("calendar.css").toExternalForm());
+                .getResource(CALENDARCSS).toExternalForm());
 
         MasterDetailPane rightMasterDetailPane = new MasterDetailPane(RIGHT);
         searchResultView = view.getSearchResultView();
@@ -378,7 +380,7 @@ public class CalendarViewSkin extends SkinBase<CalendarView> {
             developerConsoleMasterDetailPane.showDetailNodeProperty()
                     .bind(view.showDeveloperConsoleProperty());
             developerConsoleMasterDetailPane.getStylesheets()
-                    .add(CalendarFXControl.class.getResource("calendar.css")
+                    .add(CalendarFXControl.class.getResource(CALENDARCSS)
                             .toExternalForm());
             getChildren().add(developerConsoleMasterDetailPane);
         } else {

@@ -260,18 +260,22 @@ public final class Util {
     private static class EmptySelectionModel<T> extends MultipleSelectionModel<T> {
         @Override
         public void selectPrevious() {
+            //empty  Method
         }
 
         @Override
         public void selectNext() {
+            //empty  Method
         }
 
         @Override
         public void select(int index) {
+            //empty  Method
         }
 
         @Override
         public void select(T obj) {
+            //empty  Method
         }
 
         @Override
@@ -286,30 +290,37 @@ public final class Util {
 
         @Override
         public void clearSelection(int index) {
+            //empty  Method
         }
 
         @Override
         public void clearSelection() {
+            //empty  Method
         }
 
         @Override
         public void clearAndSelect(int index) {
+            //empty  Method
         }
 
         @Override
         public void selectLast() {
+            //empty  Method
         }
 
         @Override
         public void selectIndices(int index, int... indices) {
+            //empty  Method
         }
 
         @Override
         public void selectFirst() {
+            //empty  Method
         }
 
         @Override
         public void selectAll() {
+            //empty  Method
         }
 
         private final ObservableList<T> selectedItems = FXCollections.observableArrayList();

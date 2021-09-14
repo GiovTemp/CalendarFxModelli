@@ -35,6 +35,7 @@ public class CalendarSelector extends CalendarFXControl {
      * Constructs a new selector.
      */
     public CalendarSelector() {
+        //empty costr
     }
 
     @Override

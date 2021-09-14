@@ -200,7 +200,7 @@ public class YearPage extends PageBase {
         return ViewType.MONTH_VIEW;
     }
 
-    private final String YEAR_PAGE_CATEGORY = "Year Page";
+    private static final String YEAR_PAGE_CATEGORY = "Year Page";
 
     @Override
     public ObservableList<PropertySheet.Item> getPropertySheetItems() {

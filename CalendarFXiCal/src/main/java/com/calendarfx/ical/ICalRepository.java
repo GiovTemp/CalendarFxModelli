@@ -54,15 +54,15 @@ public final class ICalRepository {
 
     private static final Map<WebCalendarData, ICalCalendar> webCalendars = new LinkedHashMap<>();
 
-    public static CalendarSource familyCalendars = new CalendarSource("Family");
+    public final static CalendarSource familyCalendars = new CalendarSource("Family");
 
-    public static CalendarSource communityCalendars = new CalendarSource("Others");
+    public final static CalendarSource communityCalendars = new CalendarSource("Others");
 
-    public static DoubleProperty workDoneProperty = new SimpleDoubleProperty();
+    public final static DoubleProperty workDoneProperty = new SimpleDoubleProperty();
 
-    public static DoubleProperty totalWorkProperty = new SimpleDoubleProperty();
+    public final static DoubleProperty totalWorkProperty = new SimpleDoubleProperty();
 
-    public static StringProperty messageProperty = new SimpleStringProperty();
+    public final static StringProperty messageProperty = new SimpleStringProperty();
 
     public static void loadSources() throws IOException, ParserException {
 
@@ -70,7 +70,6 @@ public final class ICalRepository {
 
         if (familyCalendars.getCalendars().isEmpty()) {
             totalWorkProperty.set(10);
-//            createWebCalendar("https://www.nasa.gov/templateimages/redesign/calendar/iCal/nasa_calendar.ics", "NASA", Calendar.Style.STYLE1, communityCalendars);
             workDoneProperty.set(1);
             createWebCalendar("https://cantonbecker.com/astronomy-calendar/astrocal.ics", "Moon / Astro", Calendar.Style.STYLE2, communityCalendars);
             workDoneProperty.set(2);

@@ -59,6 +59,7 @@ public class ButtonBar extends CalendarFXControl {
         this.setFocusTraversable(false);
     }
 
+    @Override
     protected Skin<?> createDefaultSkin() {
         return new ButtonBarSkin(this);
     }

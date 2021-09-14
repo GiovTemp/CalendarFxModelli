@@ -36,6 +36,7 @@ import java.time.LocalTime;
 import java.time.ZonedDateTime;
 
 public class HelloResourcesCalendarView extends CalendarFXSample {
+    public static final String FONTFAMILY ="-fx-font-family: Monospaced; -fx-text-fill: blue; -fx-font-style: bold;";
 
     @Override
     public String getSampleName() {
@@ -54,9 +55,9 @@ public class HelloResourcesCalendarView extends CalendarFXSample {
             Label label4 = new Label("92 (CPC)");
 
             label1.setStyle("-fx-font-family: Monospaced; -fx-font-style: bold;");
-            label2.setStyle("-fx-font-family: Monospaced; -fx-text-fill: blue; -fx-font-style: bold;");
-            label3.setStyle("-fx-font-family: Monospaced; -fx-text-fill: blue; -fx-font-style: bold;");
-            label4.setStyle("-fx-font-family: Monospaced; -fx-text-fill: blue; -fx-font-style: bold;");
+            label2.setStyle(FONTFAMILY);
+            label3.setStyle(FONTFAMILY);
+            label4.setStyle(FONTFAMILY);
 
             label1.setAlignment(Pos.CENTER);
             label2.setAlignment(Pos.CENTER);
